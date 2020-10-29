@@ -17,4 +17,4 @@ for example. If you use erlang and want to override `[d`, do
 ```vim
 nnoremap <buffer><silent> [d
             \ :<C-U>call ShowFullDefinition#FirstDefinition('^[^%]*\.\s*\(%.*\)\?$')<CR>
-```vim
+```
