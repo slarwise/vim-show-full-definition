@@ -12,7 +12,8 @@ nnoremap <lhs> :<C-U>call ShowFullDefinition#FirstDefinition(<end_of_definition_
 `<lhs>` is the key you want to map and `<end_of_definition_pattern>` is a
 regular expression that tells the plugin when the definition has ended. Have a
 look in the ftplugins under `$VIMRUNTIME` to find patterns for end of functions
-for example. If you use erlang and want to override `[d`, do
+for example. If you use erlang and want to override `[d`, put the following in
+your `after/ftplugin/erlang.vim`
 
 ```vim
 nnoremap <buffer><silent> [d
