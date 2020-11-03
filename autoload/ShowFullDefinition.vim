@@ -2,6 +2,11 @@ function! ShowFullDefinition#FirstDefinition(end_pattern) abort
     redir => dlist
     try
         silent execute "dlist " . expand('<cword>')
+    catch /^Vim\%((\a\+)\)\=:E388:/
+        echohl ErrorMsg
+        echo split(v:exception, '\zeE388')[1]
+        echohl None
+        return
     finally
         redir END
     endtry
